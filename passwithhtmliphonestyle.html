@@ -1,0 +1,181 @@
+
+<html> 
+  <head>
+    <title> Password make the style apple </title>
+  </head>
+   <body>
+     <center>
+	   <ol>
+	    <h2>
+		  <tt>
+		    <i>
+			  <p>
+			    <dt>
+				  <th>
+				     Hi, Thanks a lot, this is the web the make password made
+					  <br /><p></p>
+					  Note: This is currently the demo version (offline)
+					  <p></p>
+					  
+<div class="mybox">
+ <h2>Make password / strong password</h2>
+ <p><input type="checkbox" id="in_harf" checked>  (ABCabc)</p>
+ <p><input type="checkbox" id="in_adad" checked> Number 0-9</p>
+ <p><input type="checkbox" id="in_chr_khas" checked>  (@#$)</p>
+ <p>Number of charachter  <input type="number" size="3" id="tedad_chr" value="10"></p>
+ <button onclick="generate_password();">build</button>
+ <p>
+  <span class="result">
+   <input type="text" id="Result" disabled><button onclick="copy_to_clipboard();" id="btn_copy">Copy</button>
+  </span>
+  <span id="result_copy"></span>
+ 
+ </p>
+</div>
+
+  <script>
+
+function generate_password() {
+ var shamel_harf , shamel_adad , shamel_herof_khas , tedad_herof;
+ shamel_harf = document.getElementById("in_harf").checked;
+ shamel_adad = document.getElementById("in_adad").checked;
+ shamel_herof_khas = document.getElementById("in_chr_khas").checked;
+ tedad_herof = document.getElementById("tedad_chr").value;
+
+ var result = '';
+ 
+ var characters_1 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+ var characters_2 = '0123456789';
+ var characters_3 = '!@#$%^&*()?';
+ var charactersLength_1 = characters_1.length;
+ var charactersLength_2 = characters_2.length;
+ var charactersLength_3 = characters_3.length;
+ 
+ var characters_1_1 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+ var characters_1_2 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()?';
+ var characters_1_3 = '0123456789!@#$%^&*()?';
+ var charactersLength_1_1 = characters_1_1.length;
+ var charactersLength_1_2 = characters_1_2.length;
+ var charactersLength_1_3 = characters_1_3.length;
+ 
+ var characters_all = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()?';
+ var charactersLength_all = characters_all.length;
+ 
+ if( shamel_harf == true && shamel_adad == true && shamel_herof_khas == true ){
+   for ( var i = 0; i < tedad_herof; i++ ){
+     result = result + characters_all.charAt(Math.floor(Math.random() * charactersLength_all));
+   }
+    document.getElementById("Result").value = result;
+ }else if( shamel_harf == true && shamel_adad == false && shamel_herof_khas == false){
+   for ( var i = 0; i < tedad_herof; i++ ){
+     result = result + characters_1.charAt(Math.floor(Math.random() * charactersLength_1));
+   }
+    document.getElementById("Result").value = result;
+ }else if( shamel_harf == true && shamel_adad == true && shamel_herof_khas == false ){
+   for ( var i = 0; i < tedad_herof; i++ ){
+     result = result + characters_1_1.charAt(Math.floor(Math.random() * charactersLength_1_1));
+   }
+    document.getElementById("Result").value = result;
+ }else if( shamel_harf == true && shamel_adad == false && shamel_herof_khas == true ){
+   for ( var i = 0; i < tedad_herof; i++ ){
+     result = result + characters_1_2.charAt(Math.floor(Math.random() * charactersLength_1_2));
+   }
+    document.getElementById("Result").value = result;
+ }else if( shamel_harf == false && shamel_adad == true && shamel_herof_khas == true ){
+   for ( var i = 0; i < tedad_herof; i++ ){
+     result = result + characters_1_3.charAt(Math.floor(Math.random() * charactersLength_1_3));
+   }
+    document.getElementById("Result").value = result;
+ }else if( shamel_harf == false && shamel_adad == false && shamel_herof_khas == true ){
+   for ( var i = 0; i < tedad_herof; i++ ){
+     result = result + characters_3.charAt(Math.floor(Math.random() * charactersLength_3));
+   }
+    document.getElementById("Result").value = result;
+ }else if( shamel_harf == false && shamel_adad == true && shamel_herof_khas == false ){
+   for ( var i = 0; i < tedad_herof; i++ ){
+     result = result + characters_2.charAt(Math.floor(Math.random() * charactersLength_2));
+   }
+    document.getElementById("Result").value = result;
+ }else{
+  alert("Please select one of the options");
+ }
+ 
+}
+
+function copy_to_clipboard(){
+  var copyText = document.getElementById("Result");
+  var Result_copy = document.getElementById("result_copy");
+  if( copyText.value == "" ){
+    alert("There is nothing to copy");
+  }else{
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  Result_copy.innerHTML = "Copied";
+  Result_copy.style.color = "green";
+  }
+}
+
+</script>
+ 
+ </th>
+ <form action="#/as/@10.201/~/#/2£/$$/%/-/(*)Sas"><button> Save </button></form>
+ <hr>
+  &copy No Copy ~ Founder: Amirhossein developer and code writing 2022-2022
+			    </dt>
+			  </p>
+		    </i>
+		  </tt>
+	    </h2>
+	   </ol>
+     </center>
+   </body>
+</html>
+<style>
+       body{
+	    background: #f8f8f8
+	   }
+	   body{
+ background-color:#f2f2f2;
+ font-family:tahoma;
+ direction:rtl;
+}
+
+.mybox{
+ background-color:#fff;
+ box-shadow: 2px 5px 30px rgba(0,0,0,.1);
+ max-width:800px;
+ margin:30px auto;
+ padding:10px;
+ text-align:center;
+}
+
+.result{
+ position:relative;
+ overflow:auto;
+}
+
+#Result{
+ padding:10px;
+ width:200px;
+ text-align:left;
+ direction:ltr;
+ font-size:14px;
+ font-weight:600;
+ border-radius:30px;
+ border:2px solid black;
+}
+
+#btn_copy{
+ right:3px;
+ position:absolute;
+ height:35px;
+ cursor:pointer;
+ border-radius: 20px;
+ border: none;
+ top: -7px;
+ background-color: #ee067e;
+ color: #fff;
+}
+
+</style>
